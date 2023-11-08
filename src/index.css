@@ -1,13 +1,67 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.genre {
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    width: 150px;
+    margin: 5px;
+    padding: 10px;
+    background-color: lightcyan;
+}
+
+img {
+    box-shadow: 5px 5px 5px 5px darkslategray;
+}
+
+.dark img {
+    box-shadow: 5px 5px 5px 5px goldenrod;
+}
+.dark button {
+    box-shadow: 5px 5px 10px 5px lightseagreen;
+}
+.dark #pageCounter {
+    background-color: lightslategray;
+    box-shadow: 3px 2px 2px lightblue;
+}
+.dark #starRating {
+    background-color: white;
+    box-shadow: 5px 5px 5px goldenrod;
+}
+.dark #movieTitle {
+    background-color: lightslategray;
+    box-shadow: 5px 5px 5px goldenrod;
+}
+.dark #Steve img {
+    box-shadow: none;
+}
+.dark #movieInfoContainer #wrapBlock div {
+    background-color: grey;
+    box-shadow: 5px 5px 5px darkgoldenrod;
+}
+.dark #movieInfoContainer #wrapBlock #genreInfo {
+    background-color: seagreen;
+    box-shadow: 5px 5px 5px skyblue;
+}
+
+.dark .genre {
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    width: 150px;
+    margin: 5px;
+    padding: 10px;
+    background-color: seagreen;
+    box-shadow: 5px 5px 5px skyblue;
+}
+
+* {
+    box-sizing: border-box;
 }

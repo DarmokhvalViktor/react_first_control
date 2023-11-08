@@ -1,0 +1,49 @@
+.Header {
+    width: 100%;
+    height: 150px;
+    background-color: #3c0352;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.Header img {
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 0;
+}
+
+.Middle {
+    display: flex;
+    flex-direction: row;
+}
+.MidEl {
+    margin: 0 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.MidEl:hover {
+    color: forestgreen;
+    scale: 1.1;
+}
+h5 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+.Profile:hover {
+    scale: 1.1
+}

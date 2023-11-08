@@ -1,0 +1,40 @@
+.MovieInfo {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.MovieInfo img {
+    height: 500px;
+    border-radius: 15px;
+    margin-right: 40px;
+    display: block;
+}
+.wrapBlock {
+    border: none !important;
+    box-shadow: none !important;
+}
+.genresBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.genreInfo {
+    width: 100px !important;
+    text-align: center;
+    padding: 5px !important;
+    background-color: lightcyan;
+}
+
+.MovieInfo div {
+    width: 400px;
+    padding: 10px 5px 10px 15px;
+    text-align: center;
+    border: 2px solid rebeccapurple;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px darkslategray;
+}
+
