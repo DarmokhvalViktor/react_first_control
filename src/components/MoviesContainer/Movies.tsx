@@ -4,16 +4,14 @@ import {SetURLSearchParams} from "react-router-dom";
 import {IMovie} from "../../interfaces";
 import {Movie} from "./Movie";
 import css from "./Movies.module.css"
-import {ISetState} from "../../types";
 
 interface IProps {
     movies: IMovie[],
-    setMovies: ISetState<IMovie[]>,
     page: string,
     setQuery: SetURLSearchParams
 }
 
-const Movies: FC<IProps> = ({movies, setMovies, page, setQuery}) => {
+const Movies: FC<IProps> = ({movies, page, setQuery}) => {
 
     const previous = (): void => {
         setQuery({page: `${+page - 1}`})
