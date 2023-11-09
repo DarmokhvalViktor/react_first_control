@@ -61,6 +61,10 @@ img {
     background-color: seagreen;
     box-shadow: 5px 5px 5px skyblue;
 }
+.dark .genre:hover {
+    scale: 1.1;
+    background-color: rebeccapurple;
+}
 
 * {
     box-sizing: border-box;

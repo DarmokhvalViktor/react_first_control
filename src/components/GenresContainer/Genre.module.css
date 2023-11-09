@@ -5,4 +5,10 @@
     margin: 5px;
     padding: 10px;
     box-shadow: 5px 5px 5px darkslategray;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.Genre:hover {
+    scale: 1.1;
+    background-color: mediumvioletred;
 }
