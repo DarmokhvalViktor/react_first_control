@@ -7,7 +7,7 @@ const movieService = {
     getAll: (page: string ="1"): IRes<IMovieData> => axiosService.get(urls.base, {params: {page}}),
     getById: (id: number) : IRes<IMovieInfo> => axiosService.get(`${urls.movie}/${id}`),
     getByGenre: (genre: string, page: string = "1") : IRes<IMovieData> => axiosService.get(urls.base, {params: {with_genres: genre, page}}),
-    getByKeyword: (keyword: string, page: string): IRes<IMovieData> => axiosService.get(urls.base, {params: {with_keywords: keyword, page}})
+    getByKeyword: (query: string, page: string): IRes<IMovieData> => axiosService.get(urls.search, {params: {query, page}})
 
 }
 

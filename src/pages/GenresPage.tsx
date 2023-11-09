@@ -4,12 +4,12 @@ import {genresService, movieService} from "../services";
 import {Genres, Movies} from "../components";
 import {IGenre} from "../interfaces/IGenre";
 import {useSearchParams} from "react-router-dom";
-import {useMovies} from "../hooks";
+import {usePage} from "../hooks";
 import {IMovie} from "../interfaces";
 
 const GenresPage = () => {
 
-        const {movies:moviesFromContext} = useMovies();
+        const {page, setPage} = usePage();
 
         const [movies, setMovies] = useState<IMovie[]>([]);
 

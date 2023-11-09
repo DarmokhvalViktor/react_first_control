@@ -1,36 +1,30 @@
 import {useForm} from "react-hook-form";
-import {useSearchParams} from "react-router-dom";
 
 import css from "./SearchForm.module.css"
-import {movieService} from "../../services";
-import {FC, useState} from "react";
+import {FC} from "react";
 import {IMovie} from "../../interfaces";
 
 interface IProps {
     movies: IMovie[],
-    setMovies: (setMovies: IMovie[]) => void
+    setMovies: (setMovies: IMovie[]) => void,
+    keyword: string,
+    setKeyword: (keyword: string) => void
+    setQuery: (page: string) => void
 }
 
-const SearchForm:FC<IProps> = ({movies, setMovies}) => {
+interface IKeyword {
+    keyword: string
+}
+
+const SearchForm:FC<IProps> = ({setKeyword, setQuery}) => {
     const {reset, register, handleSubmit, setValue} = useForm();
 
-    const [query, setQuery] = useSearchParams({page: "1"})
-    const page = query.get("page") ? query.get("page") : "1"
 
-    // useEffect((keyword:string) => {
-    //     movieService.getByKeyword(keyword, page).then(({data}) => {
-    //
-    //     })
-    // })
-    // const [movies, setMovies] = useState<IMovie[]>([])
-
-    const search = async (keyword:string) => {
-        await movieService.getByKeyword(keyword, page).then(({data}) => {
-            console.log(data.results)
-            setMovies(data.results)
-        })
+    const search = (keyword:IKeyword) => {
+        setKeyword(keyword.keyword)
+        setQuery("1")
+        reset()
     }
-    console.log(movies)
 
     return (
         <form className={css.SearchForm} onSubmit={handleSubmit(search)}>
