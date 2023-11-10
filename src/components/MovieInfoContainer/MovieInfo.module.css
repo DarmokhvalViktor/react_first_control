@@ -19,13 +19,27 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.active {
+    color: darkred;
 }
 
 .genreInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px !important;
     text-align: center;
     padding: 5px !important;
     background-color: lightcyan;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.genreInfo:hover {
+    scale: 1.1;
+    background-color: mediumvioletred;
 }
 
 .MovieInfo div {

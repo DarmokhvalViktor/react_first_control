@@ -1,0 +1,15 @@
+.Actor {
+    /*border: 2px solid lightsteelblue;*/
+    border-radius: 20px;
+    margin: 20px;
+    width: 300px;
+    display: flex;
+
+}
+.Actor img {
+    width: 100px;
+    border-radius: 10px;
+}
+.ActorText {
+    margin: 20px 0 0 20px;
+}

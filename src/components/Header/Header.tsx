@@ -1,10 +1,9 @@
-import {useNavigate} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 import css from "./Header.module.css"
 import "./Header.module.css"
 import gif from "./image/sticker.gif"
 import ControlledSwitches from "./ThemeSwitcher";
-import {useState} from "react";
 
 const Header = () => {
 
@@ -14,34 +13,32 @@ const Header = () => {
 
     const navigate = useNavigate();
 
-    const navTo = (path:string) => {
-        navigate(`${path}`, {state:{active:true}})
-    }
-
-    const [isActive, setIsActive] = useState<boolean>(false);
-    const toggleActiveAndNavigate = (path: string) => {
-        setIsActive(!isActive);
-        navigate(`${path}`, {state:{active:true}})
-    }
-
     //when clicking on header page doesn't highlight
     //TODO when clicking button it need to be highlighted, not working right now
     //TODO Navlink
 
+
+
     return (
         <div className={css.Header}>
 
-            <h1>The Movie App</h1>
+            <h2 className={css.Title}>The Movie App</h2>
 
             <div className={css.Middle}>
-                <h1 className={css.MidEl} onClick={() => navigate("search")}>Search</h1>
-                <h1 className={css.MidEl} onClick={() => navigate("movies")}>Movies</h1>
-                <h1 className={css.MidEl} onClick={() => navigate("genres")}>Genres</h1>
-
-                {/*<h1 className={`${css.MidEl} ${isActive ? "active" : ""}`} onClick={() => toggleActiveAndNavigate("movies")}>Movies</h1>*/}
-                {/*<h1 className={`${css.MidEl} ${isActive ? "active" : ""}`} onClick={() => toggleActiveAndNavigate("genres")}>Genres</h1>*/}
-                <h1 className={css.MidEl}>Favorite</h1>
+                <NavLink to={"search"}>
+                    <h1 className={css.MidEl}>Search</h1>
+                </NavLink>
+                <NavLink to={"movies"}>
+                    <h1 className={css.MidEl}>Movies</h1>
+                </NavLink>
+                <NavLink to={"genres"}>
+                    <h1 className={css.MidEl}>Genres</h1>
+                </NavLink>
+                <NavLink to={"search"}>
+                    <h1 className={css.MidEl}>Favorite</h1>
+                </NavLink>
             </div>
+
             <div id={"darkThemeSwitcher"}>
                 <ControlledSwitches/>
             </div>

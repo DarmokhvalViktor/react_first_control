@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {IMovie} from "../../interfaces";
 import css from "./Movie.module.css"
 import "./Movie.module.css"
+import gif from "../Header/image/pulp-fiction-john-travolta.gif";
 
 interface IProps {
     movie: IMovie
@@ -26,7 +27,7 @@ const Movie:FC<IProps> = ({movie}) => {
 
     return (
         <div className={css.Movie} id={"container"} onClick={toMovie}>
-            <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title}/>
+            {poster_path ? <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title}/> : <img src={gif} alt={"no poster"}/>}
             <div id={"movieTitle"}>{title}</div>
 
             <div id={"starRating"} onMouseEnter={togglePopup} onMouseLeave={togglePopup}>

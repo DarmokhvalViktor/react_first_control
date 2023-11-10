@@ -1,0 +1,9 @@
+.Actors {
+    margin-left: 50px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 {
+    text-align: center;
+}

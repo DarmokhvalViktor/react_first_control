@@ -7,15 +7,16 @@ interface IProps {
     genre: IGenre,
     setQuery: SetURLSearchParams,
     setGenreToFind: (genreToFind: string) => void
+    setChosenGenre: (setChosenGenre: string) => void
 }
-const Genre:FC<IProps> = ({genre, setQuery, setGenreToFind}) => {
+const Genre:FC<IProps> = ({genre, setQuery, setGenreToFind, setChosenGenre}) => {
 
     const {id, name} = genre;
-    const navigate = useNavigate();
 
     function searchGenre() {
         setGenreToFind(`${id}`)
         setQuery({page: `1`})
+        setChosenGenre(name)
     }
 
     return (
