@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 
 import {genresService, movieService} from "../services";
 import {Genres, Movies} from "../components";
-import {IGenre} from "../interfaces/IGenre";
+import {IGenre} from "../interfaces";
 import {useLocation, useSearchParams} from "react-router-dom";
 import {IMovie} from "../interfaces";
 
@@ -29,6 +29,8 @@ const GenresPage = () => {
                         setGenres(data.genres)
                 })
         }, [])
+
+        //TODO routs genres with urlparams
 
         useEffect(() => {
                 if(location.state) {

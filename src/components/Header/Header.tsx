@@ -25,7 +25,7 @@ const Header = () => {
             <h2 className={css.Title}>The Movie App</h2>
 
             <div className={css.Middle}>
-                <NavLink to={"search"}>
+                <NavLink to={"search/:keyword"}>
                     <h1 className={css.MidEl}>Search</h1>
                 </NavLink>
                 <NavLink to={"movies"}>

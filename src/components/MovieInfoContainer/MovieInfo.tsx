@@ -4,12 +4,11 @@ import {Rating} from "@mui/material";
 import css from "./MovieInfo.module.css"
 import "./MovieInfo.module.css"
 import {IActor, IMovieInfo} from "../../interfaces";
-import {IGenre} from "../../interfaces/IGenre";
+import {IGenre} from "../../interfaces";
 import gif from "../Header/image/pulp-fiction-john-travolta.gif"
-import {NavLink, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {actorsService} from "../../services";
 import {Actors} from "./Actors";
-import {ICrew} from "../../interfaces/ICrew";
 
 interface IProps {
     movie: IMovieInfo
@@ -24,25 +23,22 @@ const MovieInfo: FC<IProps> = ({movie}) => {
 
     const genresArry: IGenre[] = genres;
     const navigate = useNavigate();
+    console.log(genresArry)
+
+    //trending movied TODO
 
     const goTo = (id: string) => {
         navigate("/genres", {state: {genre: id}})
     }
     //TODO navigate to genres
-    console.log(genresArry)
 
     const [actors, setActors] = useState<IActor[]>()
-    const [crew, setCrew] = useState<ICrew[]>()
 
     useEffect(() => {
         actorsService.getAll(id).then(({data}) => {
-            console.log(data)
             setActors(data.cast)
-            setCrew(data.crew)
         })
     }, [])
-    console.log(actors)
-    console.log(crew)
 
     return (
         <div>

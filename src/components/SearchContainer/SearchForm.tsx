@@ -1,28 +1,24 @@
 import {useForm} from "react-hook-form";
 
 import css from "./SearchForm.module.css"
-import {FC} from "react";
-import {IMovie} from "../../interfaces";
-
-interface IProps {
-    movies: IMovie[],
-    setMovies: (setMovies: IMovie[]) => void,
-    keyword: string,
-    setKeyword: (keyword: string) => void
-    setQuery: (page: string) => void
-}
+import {useNavigate, useSearchParams} from "react-router-dom";
 
 interface IKeyword {
     keyword: string
 }
 
-const SearchForm:FC<IProps> = ({setKeyword, setQuery}) => {
-    const {reset, register, handleSubmit, setValue} = useForm();
+const SearchForm= () => {
 
+    const {reset, register, handleSubmit} = useForm();
 
-    const search = (keyword:IKeyword) => {
-        setKeyword(keyword.keyword)
-        setQuery("1")
+    // const [query, setQuery] = useSearchParams();
+    const navigate = useNavigate();
+
+    //передати через сторінку і значення в url
+
+    const search = (searchKeyword:IKeyword) => {
+        const keyword = searchKeyword.keyword
+        navigate(`${keyword}`)
         reset()
     }
 

@@ -1,4 +1,4 @@
-import {IGenre} from "../../interfaces/IGenre";
+import {IGenre} from "../../interfaces";
 import {FC} from "react";
 import css from "./Genre.module.css"
 import {SetURLSearchParams, useNavigate} from "react-router-dom";

@@ -4,33 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf39f466-2bd3-4ab1-9239-4ce8e43a9c1b" name="Changes" comment="code before context usage">
+    <list default="true" id="cf39f466-2bd3-4ab1-9239-4ce8e43a9c1b" name="Changes" comment="before search refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GenresContainer/Genre.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresContainer/Genre.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenresContainer/Genres.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresContainer/Genres.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenresContainer/Genres.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresContainer/Genres.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieInfoContainer/MovieInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieInfoContainer/MovieInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/ThemeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/ThemeSwitcher.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieInfoContainer/MovieInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieInfoContainer/MovieInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieInfoContainer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieInfoContainer/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/Movie.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/Movie.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/Movie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/Movie.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/Movies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/Movies.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchContainer/SearchResults.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchContainer/SearchResults.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/ContextProvider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/usePage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchContainer/SearchForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchContainer/SearchForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/GenresPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GenresPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SearchPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SearchResultsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchResultsPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +82,9 @@
       <workItem from="1699432075987" duration="22851000" />
       <workItem from="1699517083090" duration="27555000" />
       <workItem from="1699564050962" duration="592000" />
-      <workItem from="1699613218573" duration="12271000" />
+      <workItem from="1699613218573" duration="17942000" />
+      <workItem from="1699642925750" duration="400000" />
+      <workItem from="1699652566339" duration="5618000" />
     </task>
     <task id="LOCAL-00001" summary="init comit">
       <created>1699448497874</created>
@@ -129,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699525649544</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="before search refactoring">
+      <created>1699632243172</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699632243172</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +143,7 @@
     <MESSAGE value="added search by genres" />
     <MESSAGE value="before code cleanup\refactoring" />
     <MESSAGE value="code before context usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="code before context usage" />
+    <MESSAGE value="before search refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="before search refactoring" />
   </component>
 </project>
