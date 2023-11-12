@@ -37,7 +37,7 @@ const MovieInfo: FC<IProps> = ({movie}) => {
     return (
         <div>
             <div className={css.MovieInfo} id={"movieInfoContainer"}>
-
+s
                 {poster_path ? <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title}/> :
                     <img src={gif} alt={"no poster"}/>}
 
