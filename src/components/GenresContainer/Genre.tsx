@@ -20,8 +20,7 @@ const Genre:FC<IProps> = ({genre, setChosenGenre}) => {
 
     return (
         <div className={`${css.Genre} genre`} onClick={searchGenre}>
-            <div>id: {id}</div>
-            <div>name: {name}</div>
+            <div>{name}</div>
         </div>
     );
 };

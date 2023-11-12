@@ -15,7 +15,7 @@ interface IProps {
 
 const MovieInfo: FC<IProps> = ({movie}) => {
     const {
-        adult, original_title, original_language, overview,
+        adult, original_language, overview,
         title, release_date, vote_average, vote_count, poster_path,
         runtime, genres, tagline, id
     } = movie
@@ -42,8 +42,7 @@ const MovieInfo: FC<IProps> = ({movie}) => {
 
                 <div className={css.wrapBlock} id={"wrapBlock"}>
                     {adult ? <div>adult: {adult}</div> : ""}
-                    <div>original_title: <br/> {original_title}</div>
-                    <div>title: <br/> {title}</div>
+                    <div>{title}</div>
                     {genres.length ? <div className={css.genresBlock}>
                         {genres.map(genre => (
                                 <div className={css.genreInfo} id={"genreInfo"} key={genre.id}
@@ -51,15 +50,15 @@ const MovieInfo: FC<IProps> = ({movie}) => {
                             )
                         )}
                     </div> : ""}
-                    <div>original_language: <br/> {original_language}</div>
-                    <div>overview:<br/> {overview}</div>
-                    <div>release_date: <br/> {release_date}</div>
+                    <div>Original Language: <br/> {original_language}</div>
+                    <div>{overview}</div>
+                    <div>Release Date: <br/> {release_date}</div>
                     <div>
                         <Rating name="customized-10" defaultValue={vote_average} precision={0.1} max={10} readOnly/>
                     </div>
-                    <div>vote_count: <br/> {vote_count}</div>
-                    <div>runtime: <br/> {runtime} minutes</div>
-                    <div>tagline: <br/> {tagline}</div>
+                    <div>Vote count: <br/> {vote_count}</div>
+                    <div>Runtime: <br/> {runtime} minutes</div>
+                    <div>Tagline: <br/> {tagline}</div>
                 </div>
 
             </div>
