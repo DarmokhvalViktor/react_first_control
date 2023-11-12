@@ -19,7 +19,6 @@ const Actor:FC<IProps> = ({actor}) => {
         <div className={css.Actor}>
             <div>
                 {profile_path ? <img src={`https://image.tmdb.org/t/p/w500/${profile_path}`} alt={name}/> : <img src={gif} alt={"no poster"}/>}
-                {/*<img src={`https://image.tmdb.org/t/p/w500/${profile_path}`}/>*/}
             </div>
             <div className={css.ActorText}>
                 <div>{name}</div>

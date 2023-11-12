@@ -1,7 +1,7 @@
 import {useForm} from "react-hook-form";
+import {useNavigate} from "react-router-dom";
 
 import css from "./SearchForm.module.css"
-import {useNavigate, useSearchParams} from "react-router-dom";
 
 interface IKeyword {
     keyword: string
@@ -11,10 +11,7 @@ const SearchForm= () => {
 
     const {reset, register, handleSubmit} = useForm();
 
-    // const [query, setQuery] = useSearchParams();
     const navigate = useNavigate();
-
-    //передати через сторінку і значення в url
 
     const search = (searchKeyword:IKeyword) => {
         const keyword = searchKeyword.keyword

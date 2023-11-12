@@ -1,12 +1,11 @@
 import {FC, useEffect, useState} from "react";
 import {Rating} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 import css from "./MovieInfo.module.css"
 import "./MovieInfo.module.css"
 import {IActor, IMovieInfo} from "../../interfaces";
-import {IGenre} from "../../interfaces";
 import gif from "../Header/image/pulp-fiction-john-travolta.gif"
-import {useNavigate} from "react-router-dom";
 import {actorsService} from "../../services";
 import {Actors} from "./Actors";
 
@@ -21,16 +20,11 @@ const MovieInfo: FC<IProps> = ({movie}) => {
         runtime, genres, tagline, id
     } = movie
 
-    const genresArry: IGenre[] = genres;
     const navigate = useNavigate();
-    console.log(genresArry)
-
-    //trending movied TODO
 
     const goTo = (id: string) => {
-        navigate("/genres", {state: {genre: id}})
+        navigate(`/genres/${id}`)
     }
-    //TODO navigate to genres
 
     const [actors, setActors] = useState<IActor[]>()
 
@@ -38,7 +32,7 @@ const MovieInfo: FC<IProps> = ({movie}) => {
         actorsService.getAll(id).then(({data}) => {
             setActors(data.cast)
         })
-    }, [])
+    }, [id])
 
     return (
         <div>
@@ -51,14 +45,13 @@ const MovieInfo: FC<IProps> = ({movie}) => {
                     {adult ? <div>adult: {adult}</div> : ""}
                     <div>original_title: <br/> {original_title}</div>
                     <div>title: <br/> {title}</div>
-                    <div className={css.genresBlock}>
-                        {genresArry.map(genre => (
-                                //TODO change to onclick
+                    {genres.length ? <div className={css.genresBlock}>
+                        {genres.map(genre => (
                                 <div className={css.genreInfo} id={"genreInfo"} key={genre.id}
                                      onClick={() => goTo(`${genre.id}`)}>{genre.name}</div>
                             )
                         )}
-                    </div>
+                    </div> : ""}
                     <div>original_language: <br/> {original_language}</div>
                     <div>overview:<br/> {overview}</div>
                     <div>release_date: <br/> {release_date}</div>

@@ -39,7 +39,7 @@
 }
 .genreInfo:hover {
     scale: 1.1;
-    background-color: mediumvioletred;
+    background-color: mediumvioletred !important;
 }
 
 .MovieInfo div {

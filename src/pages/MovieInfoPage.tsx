@@ -1,7 +1,7 @@
 import {useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 import {MovieInfo} from "../components";
-import {useEffect, useState} from "react";
 import {movieService} from "../services";
 import {IMovieInfo} from "../interfaces";
 

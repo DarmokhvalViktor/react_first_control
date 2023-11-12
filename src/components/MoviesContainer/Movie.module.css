@@ -18,6 +18,7 @@
 
 .Movie:hover {
     scale: 1.1;
+    color: black;
 }
 
 .Movie div {

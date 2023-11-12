@@ -19,7 +19,6 @@ const Movie:FC<IProps> = ({movie}) => {
         navigate("/movieInfo", {state: {id}})
     }
 
-
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const togglePopup = () => {
         setIsPopupOpen(!isPopupOpen);

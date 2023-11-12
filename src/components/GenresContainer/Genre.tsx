@@ -1,21 +1,20 @@
-import {IGenre} from "../../interfaces";
 import {FC} from "react";
+import {useNavigate} from "react-router-dom";
+
+import {IGenre} from "../../interfaces";
 import css from "./Genre.module.css"
-import {SetURLSearchParams, useNavigate} from "react-router-dom";
 
 interface IProps {
     genre: IGenre,
-    setQuery: SetURLSearchParams,
-    setGenreToFind: (genreToFind: string) => void
     setChosenGenre: (setChosenGenre: string) => void
 }
-const Genre:FC<IProps> = ({genre, setQuery, setGenreToFind, setChosenGenre}) => {
+const Genre:FC<IProps> = ({genre, setChosenGenre}) => {
 
     const {id, name} = genre;
+    const navigate = useNavigate();
 
     function searchGenre() {
-        setGenreToFind(`${id}`)
-        setQuery({page: `1`})
+        navigate(`${id}`)
         setChosenGenre(name)
     }
 

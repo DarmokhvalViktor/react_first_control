@@ -1,4 +1,21 @@
 .SearchForm {
     margin-top: 150px;
     margin-bottom: -120px;
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+.SearchForm button {
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: none !important;
+}
+.SearchForm input {
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
 }

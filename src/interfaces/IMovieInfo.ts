@@ -1,6 +1,8 @@
+import {IGenre} from "./IGenre";
+
 export interface IMovieInfo {
     adult: boolean,
-    genres: [],
+    genres: IGenre[],
     id: number,
     original_language: string;
     homepage: string,

@@ -1,4 +1,4 @@
-import {NavLink, useNavigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 import css from "./Header.module.css"
 import "./Header.module.css"
@@ -10,14 +10,6 @@ const Header = () => {
     const clickToRick = () => {
         window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`)
     }
-
-    const navigate = useNavigate();
-
-    //when clicking on header page doesn't highlight
-    //TODO when clicking button it need to be highlighted, not working right now
-    //TODO Navlink
-
-
 
     return (
         <div className={css.Header}>
@@ -31,11 +23,8 @@ const Header = () => {
                 <NavLink to={"movies"}>
                     <h1 className={css.MidEl}>Movies</h1>
                 </NavLink>
-                <NavLink to={"genres"}>
+                <NavLink to={"genres/:genre"}>
                     <h1 className={css.MidEl}>Genres</h1>
-                </NavLink>
-                <NavLink to={"search"}>
-                    <h1 className={css.MidEl}>Favorite</h1>
                 </NavLink>
             </div>
 
