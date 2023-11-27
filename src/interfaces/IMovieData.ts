@@ -1,8 +1,8 @@
-import {IMovie} from "./IMovie";
+import {IMovieInfo} from "./IMovieInfo";
 
 export interface IMovieData {
     page: number,
     total_pages: number,
     total_results: number,
-    results: IMovie[]
+    results: IMovieInfo[]
 }

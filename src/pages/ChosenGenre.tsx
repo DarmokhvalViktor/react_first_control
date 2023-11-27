@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useParams, useSearchParams} from "react-router-dom";
 
 import {movieService} from "../services";
-import {IMovie} from "../interfaces";
+import {IMovieInfo} from "../interfaces";
 import {Movies} from "../components";
 
 const ChosenGenre = () => {
@@ -10,7 +10,7 @@ const ChosenGenre = () => {
     const {genre} = useParams<string>();
 
     const [pageMax, setPageMax] = useState<number>(null)
-    const [movies, setMovies] = useState<IMovie[]>([]);
+    const [movies, setMovies] = useState<IMovieInfo[]>([]);
     const [query, setQuery] = useSearchParams({page: "1"})
     const page = query.get("page") ? query.get("page") : "1"
 

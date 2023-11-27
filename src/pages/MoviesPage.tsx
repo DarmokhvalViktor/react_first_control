@@ -2,13 +2,13 @@ import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
 
 import {movieService} from "../services";
-import {IMovie} from "../interfaces";
+import {IMovieInfo} from "../interfaces";
 import {Movies} from "../components";
 
 
 const MoviesPage = () => {
 
-    const [movies, setMovies] = useState<IMovie[]>([]);
+    const [movies, setMovies] = useState<IMovieInfo[]>([]);
 
 
     const [query, setQuery] = useSearchParams({page: "1"})

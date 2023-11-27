@@ -2,13 +2,13 @@ import {FC, useState} from "react";
 import {Rating} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 
-import {IMovie} from "../../interfaces";
+import {IMovieInfo} from "../../interfaces";
 import css from "./Movie.module.css"
 import "./Movie.module.css"
 import gif from "../Header/image/pulp-fiction-john-travolta.gif";
 
 interface IProps {
-    movie: IMovie
+    movie: IMovieInfo
 }
 const Movie:FC<IProps> = ({movie}) => {
     const {id, title, vote_average,  poster_path} = movie;
@@ -16,7 +16,7 @@ const Movie:FC<IProps> = ({movie}) => {
     const navigate = useNavigate();
 
     const toMovie = () => {
-        navigate("/movieInfo", {state: {id}})
+        navigate(`/${title}`, {state: {id}})
     }
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
