@@ -1,12 +1,12 @@
 import {SetURLSearchParams} from "react-router-dom";
 import {FC} from "react";
 
-import {IMovieInfo} from "../../interfaces";
+import {IMovie} from "../../interfaces";
 import {Movie} from "./Movie";
 import css from "./Movies.module.css"
 
 interface IProps {
-    movies: IMovieInfo[],
+    movies: IMovie[],
     page: string,
     setQuery: SetURLSearchParams,
     pageMax: number

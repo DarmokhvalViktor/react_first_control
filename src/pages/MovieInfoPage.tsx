@@ -1,26 +1,26 @@
 import {useLocation} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 import {MovieInfo} from "../components";
-import {useAppDispatch, useAppSelector} from "../hooks";
-import {moviesActions} from "../store";
+import {movieService} from "../services";
+import {IMovieInfo} from "../interfaces";
 
 const MovieInfoPage = () => {
     const location = useLocation();
 
-    const id:number = location.state.id;
-
-    const {chosenMovie} = useAppSelector(state => state.movies);
-    const dispatch = useAppDispatch();
+    const movieId:number = location.state.id;
+    const [movie, setMovie] = useState<IMovieInfo>(null);
 
     useEffect(() => {
-        dispatch(moviesActions.getMovieById({id}))
-    }, [id, dispatch])
+        movieService.getById(movieId).then(({data}) => {
+            setMovie(data)
+        })
+    }, [movieId])
 
 
     return (
         <div>
-            {chosenMovie && <MovieInfo movie={chosenMovie}/>}
+            {movie && <MovieInfo movie={movie}/>}
         </div>
     );
 };

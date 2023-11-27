@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useParams, useSearchParams} from "react-router-dom";
 
-import {IMovieInfo} from "../interfaces";
+import {IMovie} from "../interfaces";
 import {movieService} from "../services";
 import {Movies} from "../components";
 
@@ -9,7 +9,7 @@ const SearchResultsPage = () => {
 
     const {keyword} = useParams<string>();
 
-    const [movies, setMovies] = useState<IMovieInfo[]>([])
+    const [movies, setMovies] = useState<IMovie[]>([])
 
     const [pageMax, setPageMax] = useState<number>(null)
 
